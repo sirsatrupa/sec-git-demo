@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <!--Validation of html not applied here. it is used for testing only on first level-->
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {{user_data.as_p}}
+        <input type="submit" value="SignIn">
+    <p>Don't have an account? <a href="{%url 'register' %}">Register</a></p>
+    
+    </form>
+</body>
+
+</html>

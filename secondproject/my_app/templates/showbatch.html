@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Batch</title>
+</head>
+<body>    
+    <h1> Your Created Batch Will Show Here </h1>
+    <table>
+        <tr>
+            <th>batch_no</th>
+            <th>module_name</th>
+            <th>time</th>
+            <th>lab_no</th>
+        </tr>
+        {% for b in show_data%}
+        <tr>            
+            <td>{{b.batch_no}}</td>
+            <td>{{b.module_name}}</td>
+            <td>{{b.time}}</td>
+            <td>{{b.lab_no}}</td>            
+        </tr>
+        {% endfor %}
+    </table>   
+</body>
+</html>
+

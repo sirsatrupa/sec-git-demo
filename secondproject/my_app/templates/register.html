@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+</head>
+
+<body>
+    <h1>Please Create Account Here</h1>
+    <!--Validation of html not applied here. it is used for testing only on first level-->
+    <form method='post' novalidate>
+        {% csrf_token %}
+        <!--    {{reg_fm}}-->
+        <table>
+            {% for fm in reg_fm %}
+            <tr>
+                <td>{{fm.label_tag}}</td>
+                <td>{{fm}}</td>
+                <td>{{fm.errors}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Register">
+    </form>
+</body>
+
+</html>
